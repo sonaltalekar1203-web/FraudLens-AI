@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI and Docker Build
 
 on:
   push:
@@ -21,7 +21,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Compile Python files
         run: python -m compileall -q .
+
+  docker-build:
+    name: Build FraudLens API image
+    runs-on: ubuntu-latest
+    needs: syntax-check
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build --tag fraudlens-ai-api:ci .
