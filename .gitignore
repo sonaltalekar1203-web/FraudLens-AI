@@ -1,0 +1,70 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*token*
+*secret*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Datasets and generated data
+datasets/
+data/
+*.csv
+*.csv.gz
+*.parquet
+*.xlsx
+*.zip
+*.tar
+*.tar.gz
+*.xz
+
+# Model and experiment artifacts (use Git LFS or an artifact store if needed)
+artifacts/*
+!artifacts/README.md
+*.pkl
+*.joblib
+*.onnx
+*.pt
+*.pth
+*.h5
+*.keras
+*.model
+
+# MLflow and local databases
+mlruns/
+mlflow_tracking/
+mlflow.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Reports, logs, caches, temporary outputs
+*.log
+logs/
+reports/
+outputs/
+tmp/
+temp/
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
