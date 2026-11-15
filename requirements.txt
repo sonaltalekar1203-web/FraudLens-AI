@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+streamlit
+pyarrow
+shap
+mlflow
+evidently
+plotly
+networkx
+matplotlib
