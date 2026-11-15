@@ -22,8 +22,9 @@ data/
 *.tar*
 *.xlsx
 
-# Model binaries (use Git LFS or artifact storage)
+# Model binaries (only the approved demo model is tracked)
 *.pkl
+!artifacts/fraudlens_transaction_model.pkl
 *.joblib
 *.onnx
 *.pt
