@@ -1,0 +1,26 @@
+{
+    "model_name": "FraudLens AI Transaction Model",
+    "features": [
+        "step",
+        "transaction_type",
+        "amount",
+        "log_amount",
+        "receiver_old_balance",
+        "receiver_zero_balance",
+        "sender_previous_txn_count",
+        "sender_previous_total_amount",
+        "sender_previous_avg_amount",
+        "sender_has_history",
+        "receiver_previous_txn_count",
+        "receiver_previous_total_amount",
+        "receiver_previous_avg_amount",
+        "receiver_has_history"
+    ],
+    "validation_selected_threshold": 0.981278,
+    "risk_category_thresholds": {
+        "high_risk": 0.8,
+        "medium_risk": 0.4
+    },
+    "dataset": "PaySim synthetic financial transactions",
+    "ground_truth_labels_in_dashboard": false
+}
