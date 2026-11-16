@@ -511,7 +511,10 @@ elif page == "Account Investigation":
     )
 
     st.dataframe(
-        account_transactions[
+        account_transactions.sort_values(
+            "risk_score",
+            ascending=False
+        )[
             [
                 "nameOrig",
                 "nameDest",
@@ -520,10 +523,7 @@ elif page == "Account Investigation":
                 "risk_percentage",
                 "risk_category"
             ]
-        ].sort_values(
-            "risk_score",
-            ascending=False
-        ).head(100),
+        ].head(100),
         use_container_width=True,
         hide_index=True
     )
