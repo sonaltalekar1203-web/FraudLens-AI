@@ -13,3 +13,4 @@ networkx
 pyarrow
 mlflow
 evidently
+joblib
